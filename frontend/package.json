@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf .next out",
+    "reinstall": "rm -rf node_modules bun.lockb && bun install"
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^2.2.8",
@@ -22,5 +25,6 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "typescript": "^5"
-  }
+  },
+  "packageManager": "bun@1.0.0"
 }

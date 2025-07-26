@@ -1,0 +1,22 @@
+[install]
+# Use exact versions for better reproducibility
+exact = true
+
+# Use faster registry
+registry = "https://registry.npmjs.org/"
+
+# Cache packages for faster installs
+cache = true
+
+# Trust packages more (speeds up installs)
+trusted = ["@types/*", "next", "react", "react-dom"]
+
+[install.scopes]
+# Speed up installations for common scopes
+"@types" = { registry = "https://registry.npmjs.org/" }
+"@rainbow-me" = { registry = "https://registry.npmjs.org/" }
+"@tanstack" = { registry = "https://registry.npmjs.org/" }
+
+[run]
+# Use Bun for running scripts when possible
+shell = "bun"
